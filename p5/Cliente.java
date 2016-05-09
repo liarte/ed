@@ -1,21 +1,17 @@
 
 package p5;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Cliente {
     private String codigo;
     private String PrimerApellido;
     private int numCuenta;
     private String direccion;
     private int telf;
-    private List<Persona> persona;
-    private List<Mascota> mascota;
+    protected Persona[] datos;
+    protected Mascota[] mascota;
     
     public Cliente() {
-        persona = new ArrayList<>();
-        mascota = new ArrayList<>();
+        // TO DO
     }
     
     public String getCodigo() {
@@ -73,30 +69,6 @@ public class Cliente {
         this.telf = telf;
         return true;
     }
-    
-    public Persona[] getPersona() {
-        return (Persona[]) persona.toArray();
-    }
-    
-    public boolean addPersona(Persona persona) {
-        if (persona != null) {
-            this.persona.add(persona);
-            return true;
-        }
-        return false;
-    }
-    
-    public Mascota[] getMascota() {
-        return (Mascota[]) mascota.toArray();
-    }
-    
-    public boolean addMascota(Mascota mascota) {
-        if (mascota != null) {
-            mascota.addCliente(this);
-            this.mascota.add(mascota);
-            return true;
-        }
-        return false;
-    }
 }
-
+    
+    
